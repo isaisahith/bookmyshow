@@ -4,15 +4,27 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import './Movie.css'
 import { Description } from './Description/Description';
 
-export const Movie = ({movie}) => {
-    const {name, description} = movie;
+export const Movie = (props) => {
+    //const {name, description} = movie;
+
+    const {movie, search} = props;
+
+    console.log(props)
+
+    const searchedValue = search;
+
+    
+
+
+    
+
   return (
     <div >
         <Card style={{ width: '18rem' }} className='movie'>
       <Card.Img className='cardImage' variant="top" src={movie.posterUrl} />
       <Card.Body>
-        <Card.Title>{movie.name}</Card.Title>
-        <Description description={description}/>
+        <Card.Title><span style={{backgroundColor:'yellow'}}>{searchedValue}</span><span>{movie.name.slice(searchedValue.length)}</span></Card.Title>
+        <Description description={movie.description}/>
       </Card.Body>
       <ListGroup className="list-group-flush">
         
