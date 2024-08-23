@@ -1,0 +1,9 @@
+.movieList {
+    margin-top: 5px;
+    border: red solid 3px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}

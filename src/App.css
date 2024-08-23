@@ -36,3 +36,91 @@
     transform: rotate(360deg);
   }
 }
+
+/* Navbar.css */
+
+.navbar {
+  background-color: #007bff;
+  /* Blue background color */
+  padding: 1rem;
+}
+
+.navbar-menu {
+  
+  list-style: none;
+  display: flex;
+  justify-content:flex-start;
+  margin-left: 45px;
+  padding: 0;
+}
+
+.navbar-item a {
+  color: white;
+  /* White text color */
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 55px;
+}
+
+.navbar-item a:hover {
+  text-decoration: underline;
+}
+
+
+/* MovieCard.css */
+
+.movie-card {
+  border: 1px solid #ddd;
+  /* Light grey border */
+  border-radius: 8px;
+  /* Rounded corners */
+  overflow: hidden;
+  /* Hide overflowing content */
+  width: 300px;
+  /* Fixed width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Shadow effect */
+  transition: transform 0.2s ease-in-out;
+  /* Smooth scale transition */
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge the card on hover */
+}
+
+.movie-card-poster {
+  width: 100%;
+  /* Full width of the card */
+  height: 200px;
+  /* Fixed height for poster */
+  object-fit: cover;
+  /* Maintain aspect ratio while covering the box */
+}
+
+.movie-card-content {
+  padding: 16px;
+  /* Space inside the card */
+}
+
+.movie-card-title {
+  font-size: 1.5rem;
+  /* Title font size */
+  margin: 0 0 8px;
+  /* Space below title */
+}
+
+.movie-card-description {
+  font-size: 1rem;
+  /* Description font size */
+  color: #555;
+  /* Darker grey text color */
+  margin: 0;
+  /* No margin */
+}
+
+
+
+
+
+
