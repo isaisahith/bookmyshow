@@ -1,13 +1,15 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
+
+import Button from 'react-bootstrap/Button';
 import './Movie.css'
 import { Description } from './Description/Description';
+import { ViewMore } from './ViewMore/ViewMore';
 
 export const Movie = (props) => {
     //const {name, description} = movie;
 
-    const {movie, search} = props;
+    const {movie, search, onRemove} = props;
 
     console.log(props)
 
@@ -23,18 +25,16 @@ export const Movie = (props) => {
         <Card style={{ width: '18rem' }} className='movie'>
       <Card.Img className='cardImage' variant="top" src={movie.posterUrl} />
       <Card.Body>
-        <Card.Title><span style={{backgroundColor:'yellow'}}>{searchedValue}</span><span>{movie.name.slice(searchedValue.length)}</span></Card.Title>
-        <Description description={movie.description}/>
+        <Card.Title className='title'><span style={{backgroundColor:'yellow'}}>{movie.name.slice(0,searchedValue.length)}</span><span>{movie.name.slice(searchedValue.length)}</span></Card.Title>
+        <Description className='description' description={movie.description}/>
       </Card.Body>
-      <ListGroup className="list-group-flush">
         
-        <ListGroup.Item>Directed by {movie.director}</ListGroup.Item>
-        <ListGroup.Item>released on {movie.releaseDate}</ListGroup.Item>
-      </ListGroup>
-      {/* <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
-      </Card.Body> */}
+      <Card.Body>
+        <ViewMore movie={movie} onRemove={onRemove}/>
+        {/* <Card.Link href="#">Card Link</Card.Link>
+        <Card.Link href="#">Another Link</Card.Link> */}
+        
+      </Card.Body>
     </Card>
     </div>
   )

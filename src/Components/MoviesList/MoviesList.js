@@ -12,6 +12,13 @@ export const MoviesList = () => {
   const [movieList, setMovieList] = useState(moviesData);
   const [search, setSearch] = useState('');
 
+
+  const onRemove = (_id)=>{
+    const filteredMovies = movieList.filter(movie=>movie._id!=_id);
+
+    setMovieList(filteredMovies);
+  }
+
   const handleSearch = (e)=>{
 
     let searchedvalue = e.target.value;
@@ -45,7 +52,7 @@ export const MoviesList = () => {
         <input name='search' placeholder='moviename'
         onChange={(e)=>handleSearch(e)}/>
       <div className='movieList'>
-          {movieList.map((movie)=><Movie movie={movie} search={search}/>)}
+          {movieList.map((movie)=><Movie key={movie._id} movie={movie} search={search} onRemove={onRemove}/>)}
       </div>
         
     </div>
