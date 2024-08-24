@@ -26,9 +26,10 @@ export const Movie = (props) => {
 
   return (
     <div >
-        <Link to={`/moviedetails/${movie._id}`} style={{textDecoration:"none"}}>
+        
           <Card style={{ width: '18rem' }} className='movie'>
-      <Card.Img className='cardImage' variant="top" src={movie.posterUrl} />
+            <Link to={`/moviedetails/${movie._id}`} style={{textDecoration:"none"}}>
+      <Card.Img className='cardImage' variant="top" src={movie.posterUrl} /> </Link>
       <Card.Body>
         <Card.Title className='title'><span style={{backgroundColor:'yellow'}}>{movie.name.slice(0,searchedValue.length)}</span><span>{movie.name.slice(searchedValue.length)}</span></Card.Title>
         <Description className='description' description={movie.description}/>
@@ -42,7 +43,7 @@ export const Movie = (props) => {
         
       </Card.Body>
     </Card>
-        </Link>
+        
     </div>
   )
 }
