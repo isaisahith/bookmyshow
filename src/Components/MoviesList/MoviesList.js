@@ -1,16 +1,42 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import moviesData from './MoviesData'
+
 import { Movie } from '../Movie/Movie'
 import './MovieList.css'
 import { NoMovies } from '../NoMovies.js/NoMovies'
+import { Spinner } from 'react-bootstrap'
 
 
 export const MoviesList = () => {
   
 
-  const [movieList, setMovieList] = useState(moviesData);
+  const [movieList, setMovieList] = useState([]);
   const [search, setSearch] = useState('');
+  const [isLoading, setIsLoading] = useState(false)
+
+ const [allMovies, setAllMovies] = useState([]);
+
+
+
+  const fetchMovies =async()=>{
+      try{
+        setIsLoading(true);
+        const resp = await fetch("https://movie-booking-application.onrender.com/mba/api/v1/movies");
+        const data = await resp.json();
+        setMovieList(data);
+        setIsLoading(false)
+        setAllMovies(data)
+      }catch(err){
+
+      }
+      
+  }
+
+  useEffect(()=>{
+    fetchMovies();
+    console.log("All movies")
+    console.log(allMovies)
+  },[])
 
 
   const onRemove = (_id)=>{
@@ -25,7 +51,7 @@ export const MoviesList = () => {
 
     setSearch(searchedvalue)
 
-    const filteredData = moviesData.filter(movie=>movie.name.toLowerCase().startsWith(searchedvalue));
+    const filteredData = allMovies.filter(movie=>movie.name.toLowerCase().startsWith(searchedvalue));
 
     setMovieList(filteredData);
 
@@ -35,10 +61,26 @@ export const MoviesList = () => {
 
   }
 
-  if(movieList.length==0){
+
+  if(isLoading){
     return (
       <div className='movieList-container'>
+        <Spinner/>
+      </div>
+    )
+  }
+
+  
+
+  if(movieList.length==0){
+
+
+    return (
+      <div className='movieList-container'>
+
+        
         <input name='search' placeholder='moviename'
+        
         onChange={(e)=>handleSearch(e)}/>
       <div className='movieList'>
           <NoMovies/>
@@ -51,6 +93,7 @@ export const MoviesList = () => {
     <div className='movieList-container'>
         <input name='search' placeholder='moviename'
         onChange={(e)=>handleSearch(e)}/>
+        
       <div className='movieList'>
           {movieList.map((movie)=><Movie key={movie._id} movie={movie} search={search} onRemove={onRemove}/>)}
       </div>

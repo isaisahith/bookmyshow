@@ -588,7 +588,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
-    ,rating: 3
+    ,rating: 3.7
   },
   {
     _id: "65084691dc5854d33d3b28d1",

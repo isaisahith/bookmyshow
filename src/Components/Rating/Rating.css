@@ -18,3 +18,42 @@
     font-size: 25px;
 
 }
+
+.star-container {
+    display: flex;
+    font-size: 2em;
+    /* Adjust size as needed */
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.star {
+    position: relative;
+    color: #d3d3d3;
+    /* Default color for unfilled stars */
+}
+
+.star-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #e4bd0e;
+    /* Color for filled stars */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.star-fill:before {
+    content: '\2605';
+    /* Unicode for filled star symbol */
+}
+
+.partial-star{
+    overflow: hidden;
+}
+
+.rating-text{
+    font-size: 15px;
+    font-weight: 400;
+}
