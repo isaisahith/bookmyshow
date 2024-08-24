@@ -15,7 +15,9 @@ const moviesData=[
     director: "S. Shankar",
     releaseStatus: "RELEASED",
     updatedAt: "2023-06-28T09:43:08.242Z",
-    __v: 0
+    __v: 0,
+
+    rating: 4
   },
   {
     occupiedSeats: [],
@@ -33,7 +35,8 @@ const moviesData=[
     director: "Suresh Triveni",
     releaseStatus: "RELEASED",
     updatedAt: "2023-06-28T09:43:08.373Z",
-    __v: 0
+    __v: 0,
+    rating: 4
   },
   {
     occupiedSeats: [],
@@ -52,6 +55,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     updatedAt: "2023-06-28T09:43:08.424Z",
     __v: 0
+    ,rating: 2
   },
   {
     occupiedSeats: [],
@@ -70,6 +74,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     updatedAt: "2023-06-28T09:43:08.475Z",
     __v: 0
+    ,rating: 3
   },
   {
     occupiedSeats: [],
@@ -88,6 +93,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     updatedAt: "2023-06-28T09:43:08.524Z",
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64a02f685152021ca3fd613b",
@@ -105,6 +111,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 5
   },
   {
     _id: "64a02f6a5152021ca3fd613e",
@@ -122,6 +129,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64a02f6b5152021ca3fd6141",
@@ -139,6 +147,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 4
   },
   {
     _id: "64a02f6c5152021ca3fd6144",
@@ -156,6 +165,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 4
   },
   {
     _id: "64a02f6c5152021ca3fd6147",
@@ -173,6 +183,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 1
   },
   {
     _id: "64a02f6d5152021ca3fd614a",
@@ -190,6 +201,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 4
   },
   {
     _id: "64a02f6d5152021ca3fd614d",
@@ -207,6 +219,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 5
   },
   {
     _id: "64a02f6e5152021ca3fd6150",
@@ -224,6 +237,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64a02f6f5152021ca3fd6153",
@@ -240,7 +254,8 @@ const moviesData=[
     director: "Vivek Agnihotri",
     releaseStatus: "RELEASED",
     occupiedSeats: [],
-    __v: 0
+    __v: 0,
+    rating: 3
   },
   {
     _id: "64a02f6f5152021ca3fd6156",
@@ -258,6 +273,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64eb3a4aa96bb8786f95a1c1",
@@ -275,6 +291,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64eb3aa9a96bb8786f95a1c6",
@@ -292,6 +309,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64eb3aaaa96bb8786f95a1c9",
@@ -309,6 +327,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64eb3aaca96bb8786f95a1cc",
@@ -326,6 +345,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64f3243b11bcb81efb1ff907",
@@ -340,6 +360,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64f32db111bcb81efb1ff932",
@@ -354,6 +375,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64f32dc811bcb81efb1ff935",
@@ -368,6 +390,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64f32dd811bcb81efb1ff93a",
@@ -382,6 +405,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64f32e0711bcb81efb1ff93d",
@@ -396,6 +420,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64f32e1b11bcb81efb1ff941",
@@ -410,6 +435,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64f32e4e11bcb81efb1ff944",
@@ -424,6 +450,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64f32e5511bcb81efb1ff948",
@@ -438,6 +465,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64f32e8611bcb81efb1ff94b",
@@ -452,6 +480,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64f32eb911bcb81efb1ff94e",
@@ -466,6 +495,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64f32ecb11bcb81efb1ff951",
@@ -480,6 +510,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64f32eed11bcb81efb1ff954",
@@ -494,6 +525,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64f32f5311bcb81efb1ff959",
@@ -508,6 +540,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "64fad672c335e380e8696c71",
@@ -525,6 +558,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "6508258169847fe0b8f54cea",
@@ -539,6 +573,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "65084581dc5854d33d3b28cb",
@@ -553,6 +588,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "65084691dc5854d33d3b28d1",
@@ -567,6 +603,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "650846d3dc5854d33d3b28d7",
@@ -581,6 +618,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "65086f7b74e4627952e0e90c",
@@ -595,6 +633,7 @@ const moviesData=[
     releaseStatus: "BLOCKED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "6508ac21bc9e39ff931c1250",
@@ -609,6 +648,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "650a979e16909bc0928ff1ba",
@@ -623,6 +663,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "650a979e16909bc0928ff1bc",
@@ -637,6 +678,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "650a979e16909bc0928ff1c0",
@@ -651,6 +693,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "650a979f16909bc0928ff1c3",
@@ -665,6 +708,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "650a979f16909bc0928ff1c5",
@@ -679,6 +723,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   },
   {
     _id: "650a985e16909bc0928ff1cc",
@@ -693,6 +738,7 @@ const moviesData=[
     releaseStatus: "RELEASED",
     occupiedSeats: [],
     __v: 0
+    ,rating: 3
   }
 ]
 

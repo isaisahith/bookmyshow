@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import './Movie.css'
 import { Description } from './Description/Description';
 import { ViewMore } from './ViewMore/ViewMore';
+import { Rating } from '../Rating/Rating';
 
 export const Movie = (props) => {
     //const {name, description} = movie;
@@ -17,7 +18,9 @@ export const Movie = (props) => {
 
     
 
+    const rating =4;
 
+    console.log(movie)
     
 
   return (
@@ -30,6 +33,7 @@ export const Movie = (props) => {
       </Card.Body>
         
       <Card.Body>
+        <Rating rating ={movie.rating}/>
         <ViewMore movie={movie} onRemove={onRemove}/>
         {/* <Card.Link href="#">Card Link</Card.Link>
         <Card.Link href="#">Another Link</Card.Link> */}
