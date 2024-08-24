@@ -6,6 +6,7 @@ import './Movie.css'
 import { Description } from './Description/Description';
 import { ViewMore } from './ViewMore/ViewMore';
 import { Rating } from '../Rating/Rating';
+import { Link } from 'react-router-dom';
 
 export const Movie = (props) => {
     //const {name, description} = movie;
@@ -25,7 +26,8 @@ export const Movie = (props) => {
 
   return (
     <div >
-        <Card style={{ width: '18rem' }} className='movie'>
+        <Link to={`/moviedetails/${movie._id}`} style={{textDecoration:"none"}}>
+          <Card style={{ width: '18rem' }} className='movie'>
       <Card.Img className='cardImage' variant="top" src={movie.posterUrl} />
       <Card.Body>
         <Card.Title className='title'><span style={{backgroundColor:'yellow'}}>{movie.name.slice(0,searchedValue.length)}</span><span>{movie.name.slice(searchedValue.length)}</span></Card.Title>
@@ -40,6 +42,7 @@ export const Movie = (props) => {
         
       </Card.Body>
     </Card>
+        </Link>
     </div>
   )
 }

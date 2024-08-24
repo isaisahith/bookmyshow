@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 
 
-import { Movie } from '../Movie/Movie'
+import { Movie } from '../../Components/Movie/Movie'
 import './MovieList.css'
-import { NoMovies } from '../NoMovies.js/NoMovies'
+import { NoMovies } from '../../Components/NoMovies.js/NoMovies'
 import { Spinner } from 'react-bootstrap'
 
 
