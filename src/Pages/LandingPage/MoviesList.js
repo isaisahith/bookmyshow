@@ -5,6 +5,9 @@ import { Movie } from '../../Components/Movie/Movie'
 import './MovieList.css'
 import { NoMovies } from '../../Components/NoMovies.js/NoMovies'
 import { Spinner } from 'react-bootstrap'
+import { getAllMovies } from '../../APIs/Movie/movie'
+
+
 
 
 export const MoviesList = () => {
@@ -21,11 +24,11 @@ export const MoviesList = () => {
   const fetchMovies =async()=>{
       try{
         setIsLoading(true);
-        const resp = await fetch("https://movie-booking-application.onrender.com/mba/api/v1/movies");
-        const data = await resp.json();
-        setMovieList(data);
+        
+        const newData = await getAllMovies();
+        setMovieList(newData);
         setIsLoading(false)
-        setAllMovies(data)
+        setAllMovies(newData)
       }catch(err){
 
       }
@@ -34,7 +37,7 @@ export const MoviesList = () => {
 
   useEffect(()=>{
     fetchMovies();
-    console.log("All movies")
+    
     console.log(allMovies)
   },[])
 
