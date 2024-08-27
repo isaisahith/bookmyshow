@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 export const Movie = (props) => {
     //const {name, description} = movie;
 
-    const {movie, search, onRemove} = props;
+    const {movie, search, onRemove, user} = props;
 
     
 
@@ -35,13 +35,13 @@ export const Movie = (props) => {
         <Description className='description' description={movie.description}/>
       </Card.Body>
         
-      <Card.Body>
+      {user && <Card.Body>
         <Rating rating ={movie.rating}/>
         <ViewMore movie={movie} onRemove={onRemove}/>
         {/* <Card.Link href="#">Card Link</Card.Link>
         <Card.Link href="#">Another Link</Card.Link> */}
         
-      </Card.Body>
+      </Card.Body>}
     </Card>
         
     </div>

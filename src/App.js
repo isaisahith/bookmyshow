@@ -21,7 +21,7 @@ function App() {
       
       {/* <Rating/> */}
       
-      <CustomNavbar/>
+      
 
       <BrowserRouter>
 

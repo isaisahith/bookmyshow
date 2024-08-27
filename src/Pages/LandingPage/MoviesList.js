@@ -7,6 +7,7 @@ import { NoMovies } from '../../Components/NoMovies.js/NoMovies'
 import { Spinner } from 'react-bootstrap'
 import { getAllMovies } from '../../APIs/Movie/movie'
 import { Filters } from '../../Components/Filters/Filters'
+import CustomNavbar from '../../Components/Navbar/Navbar'
 
 
 
@@ -20,6 +21,8 @@ export const MoviesList = () => {
 
  const [allMovies, setAllMovies] = useState([]);
  const [language, setLanguage] = useState('');
+
+ const [user, setUser] = useState(false);
 
 
 
@@ -110,8 +113,12 @@ export const MoviesList = () => {
 
   if(isLoading){
     return (
-      <div className='movieList-container'>
+      <div>
+        <CustomNavbar user={user} setUser={setUser}/>
+        <div className='movieList-container'>
+        
         <Spinner/>
+      </div>
       </div>
     )
   }
@@ -122,27 +129,34 @@ export const MoviesList = () => {
 
 
     return (
+      <div>
+        <CustomNavbar user={user} setUser={setUser}/>
       <div className='movieList-container'>
-
+          
         
         <Filters setSearch={setSearch} handleLanguage={handleLanguage} />
           <NoMovies/>
+      </div>
+
       </div>
         
     
     )
   }
   return (
+    <div>
+       <CustomNavbar user={user} setUser={setUser}/>
     <div className='movieList-container'>
         {/* <input name='search' placeholder='moviename'
         onChange={(e)=>handleSearch(e)}/> */}
-
+       
         <Filters setSearch={setSearch} handleLanguage={handleLanguage}/>
         
       <div className='movieList'>
-          {movieList.map((movie)=><Movie key={movie._id} movie={movie} search={search} onRemove={onRemove}/>)}
+          {movieList.map((movie)=><Movie key={movie._id} movie={movie} search={search} onRemove={onRemove} user={user}/>)}
       </div>
         
+    </div>
     </div>
   )
 }

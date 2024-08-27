@@ -3,7 +3,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 
-function CustomNavbar() {
+function CustomNavbar({user, setUser}) {
+
+  
+  
   return (
     <>
       
@@ -18,6 +21,8 @@ function CustomNavbar() {
             <Nav.Link href="#pricing">Pricing</Nav.Link>
           </Nav>
         </Container>
+
+        {user?<h5 style={{marginRight:"50px", cursor:"pointer", color:"white"}} onClick={()=>setUser(!user)}>Logout</h5>:<h5 style={{marginRight:"50px", cursor:"pointer", color:"white"}} onClick={()=>setUser(!user)}>Login</h5>}
       </Navbar>
 
       
