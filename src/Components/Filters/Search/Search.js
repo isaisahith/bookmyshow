@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-export const Search = () => {
+export const Search = ({setSearch}) => {
+
+
+  const [searchVal, setSearchVal]= useState('');
+
+  useEffect(()=>{
+      setSearch(searchVal)
+  },[searchVal])
+
+  
   return (
-    <div>Search</div>
+    <div>
+      <input type='text' placeholder='Search movie' onChange={e=>setSearchVal(e.target.value)} value={searchVal}/>
+    </div>
   )
 }

@@ -13,7 +13,7 @@ export const Movie = (props) => {
 
     const {movie, search, onRemove} = props;
 
-    console.log(props)
+    
 
     const searchedValue = search;
 
@@ -21,7 +21,7 @@ export const Movie = (props) => {
 
     const rating =4;
 
-    console.log(movie)
+    
     
 
   return (

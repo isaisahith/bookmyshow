@@ -6,6 +6,7 @@ import './MovieList.css'
 import { NoMovies } from '../../Components/NoMovies.js/NoMovies'
 import { Spinner } from 'react-bootstrap'
 import { getAllMovies } from '../../APIs/Movie/movie'
+import { Filters } from '../../Components/Filters/Filters'
 
 
 
@@ -18,6 +19,7 @@ export const MoviesList = () => {
   const [isLoading, setIsLoading] = useState(false)
 
  const [allMovies, setAllMovies] = useState([]);
+ const [language, setLanguage] = useState('');
 
 
 
@@ -38,7 +40,7 @@ export const MoviesList = () => {
   useEffect(()=>{
     fetchMovies();
     
-    console.log(allMovies)
+    
   },[])
 
 
@@ -48,21 +50,62 @@ export const MoviesList = () => {
     setMovieList(filteredMovies);
   }
 
-  const handleSearch = (e)=>{
 
-    let searchedvalue = e.target.value;
-
-    setSearch(searchedvalue)
-
-    const filteredData = allMovies.filter(movie=>movie.name.toLowerCase().startsWith(searchedvalue));
-
-    setMovieList(filteredData);
-
-    
-
+  const handleFilters =()=>{
+      handleSearch();
+      // handleFilters(language);
 
 
   }
+
+  const handleLanguage =(lan)=>{
+    setLanguage(lan)
+  }
+
+ 
+
+  const handleSearch = ()=>{
+
+    
+
+    
+
+    const filteredData = allMovies.filter(movie=>movie.name.toLowerCase().startsWith(search));
+
+    setMovieList(filteredData);
+
+  }
+
+
+
+
+  const filterByLanguage =(language)=>{
+
+    if(language.toLowerCase()=='all'){
+      handleSearch();
+      return;
+    }
+
+    const filteredData = allMovies.filter(movie=>movie.name.toLowerCase().startsWith(search));
+    
+    const newMovies = filteredData.filter(m=>m.language.toLowerCase()==language.toLowerCase());
+    setMovieList(newMovies);
+  }
+
+  const dummyFun = ()=>{
+    console.log("dummy fun")
+  }
+
+
+  
+
+
+  useEffect(()=>{
+    
+    handleSearch()
+    filterByLanguage(language);
+    
+  },[search, language])
 
 
   if(isLoading){
@@ -82,20 +125,19 @@ export const MoviesList = () => {
       <div className='movieList-container'>
 
         
-        <input name='search' placeholder='moviename'
-        
-        onChange={(e)=>handleSearch(e)}/>
-      <div className='movieList'>
+        <Filters setSearch={setSearch} handleLanguage={handleLanguage} />
           <NoMovies/>
       </div>
         
-    </div>
+    
     )
   }
   return (
     <div className='movieList-container'>
-        <input name='search' placeholder='moviename'
-        onChange={(e)=>handleSearch(e)}/>
+        {/* <input name='search' placeholder='moviename'
+        onChange={(e)=>handleSearch(e)}/> */}
+
+        <Filters setSearch={setSearch} handleLanguage={handleLanguage}/>
         
       <div className='movieList'>
           {movieList.map((movie)=><Movie key={movie._id} movie={movie} search={search} onRemove={onRemove}/>)}

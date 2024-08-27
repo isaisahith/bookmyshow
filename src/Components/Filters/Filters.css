@@ -1,0 +1,12 @@
+.filters-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.filter-by-language{
+    width: 150px;
+    
+}
