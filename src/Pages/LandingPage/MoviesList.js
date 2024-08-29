@@ -153,7 +153,9 @@ export const MoviesList = () => {
         <Filters setSearch={setSearch} handleLanguage={handleLanguage}/>
         
       <div className='movieList'>
-          {movieList.map((movie)=><Movie key={movie._id} movie={movie} search={search} onRemove={onRemove} user={user}/>)}
+          {movieList.map((movie)=><Movie key={movie._id} 
+          movie={movie} search={search} 
+          onRemove={onRemove} user={user}/>)}
       </div>
         
     </div>
