@@ -7,11 +7,14 @@ import { Description } from './Description/Description';
 import { ViewMore } from './ViewMore/ViewMore';
 import { Rating } from '../Rating/Rating';
 import { Link } from 'react-router-dom';
+import { isUserLoggedIn } from '../../utils/helper';
 
 export const Movie = (props) => {
     //const {name, description} = movie;
 
     const {movie, search, onRemove, user} = props;
+
+    const isLoggedIn = isUserLoggedIn();
 
     
 
@@ -35,7 +38,7 @@ export const Movie = (props) => {
         <Description className='description' description={movie.description}/>
       </Card.Body>
         
-      {user && <Card.Body>
+      {isLoggedIn && <Card.Body>
         <Rating rating ={movie.rating}/>
         <ViewMore movie={movie} onRemove={onRemove}/>
         {/* <Card.Link href="#">Card Link</Card.Link>
